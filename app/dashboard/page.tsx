@@ -1,12 +1,14 @@
-import { Suspense } from "react";
-export default function Home() {
-  return (
-    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
-      <div className="w-full max-w-sm">
-        <Suspense>
-          Hello World
-        </Suspense>
-      </div>
-    </div>
-  );
+import { redirect } from 'next/navigation'
+import { createClient } from '@/app/utils/supabase/server'
+import CreatorDashboard from '@/components/CreatorDashboard'
+
+export default async function Page() {
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
+
+  if (!user) {
+    redirect('/login')
+  }
+
+  return <CreatorDashboard />
 }
