@@ -1,11 +1,9 @@
-// app/page.tsx
 "use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import GradientAnimations from "@/components/GradientBackground";
-import Login from "./login/page";
+import GradientBackground from "@/components/GradientBackground";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -18,7 +16,7 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen overflow-hidden text-white font-sans">
-      <GradientAnimations />
+      <GradientBackground />
 
       <div className="relative z-10 flex flex-col min-h-screen justify-between max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -50,7 +48,7 @@ export default function Home() {
             creative teams deserve delight!
           </h1>
 
-          {/* New Subtitle */}
+          
           <p className="text-white/80 text-lg sm:text-xl mb-4">
             Let's begin our journey
           </p>

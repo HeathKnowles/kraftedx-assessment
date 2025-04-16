@@ -3,7 +3,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function GradientAnimations() {
+export default function GradientBackground() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const animationFrameId = useRef<number>(0);
   
