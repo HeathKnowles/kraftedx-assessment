@@ -5,4 +5,4 @@ This is a Next.js App for the KraftedX Assessment.
 
 Libraries and Technologies
 - Next.js + TypeScript
-- MantineUI
+- Supabase For Auth
